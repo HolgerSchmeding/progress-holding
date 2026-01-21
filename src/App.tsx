@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
+import { Link } from 'react-router-dom'
 import './App.css'
 
 // Custom Hook für Scroll-Animationen
@@ -543,8 +544,8 @@ function Footer() {
         <div className="footer-bottom">
           <p>&copy; {new Date().getFullYear()} pro.gress Holding GmbH (in Gründung). Alle Rechte vorbehalten.</p>
           <div className="footer-legal">
-            <a href="#">Impressum</a>
-            <a href="#">Datenschutz</a>
+            <Link to="/impressum">Impressum</Link>
+            <Link to="/datenschutz">Datenschutz</Link>
           </div>
         </div>
       </div>
