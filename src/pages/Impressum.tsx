@@ -23,8 +23,8 @@ function Impressum() {
             <h2>Angaben gemäß § 5 TMG</h2>
             <p>
               <strong>pro.gress Holding GmbH (in Gründung)</strong><br />
-              [Straße und Hausnummer]<br />
-              [PLZ] [Ort]<br />
+              Lange Straße 75<br />
+              76530 Baden-Baden<br />
               Deutschland
             </p>
           </section>
@@ -32,15 +32,15 @@ function Impressum() {
           <section className="legal-section">
             <h2>Vertreten durch</h2>
             <p>
-              Geschäftsführer: [Name des Geschäftsführers]
+              Geschäftsführer: Holger Schmeding
             </p>
           </section>
 
           <section className="legal-section">
             <h2>Kontakt</h2>
             <p>
-              Telefon: [Telefonnummer]<br />
-              E-Mail: <a href="mailto:info@progress-holding.de">info@progress-holding.de</a>
+              Telefon: +49 152 34186900<br />
+              E-Mail: <a href="mailto:contact@progress-holding.de">contact@progress-holding.de</a>
             </p>
           </section>
 
@@ -66,8 +66,8 @@ function Impressum() {
           <section className="legal-section">
             <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
             <p>
-              [Name]<br />
-              [Adresse]
+              Holger Schmeding<br />
+              Lange Straße 75, 76530 Baden-Baden
             </p>
           </section>
 

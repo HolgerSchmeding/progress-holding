@@ -500,7 +500,7 @@ function CTASection() {
             wir freuen uns auf den Austausch mit Ihnen.
           </p>
           <div className="cta-buttons">
-            <a href="mailto:info@progress-holding.de" className="btn btn-primary btn-large">
+            <a href="mailto:contact@progress-holding.de" className="btn btn-primary btn-large">
               <span className="btn-icon">✉️</span>
               Kontakt aufnehmen
             </a>
@@ -537,7 +537,7 @@ function Footer() {
           </div>
           <div className="footer-contact">
             <h4>Kontakt</h4>
-            <p>info@progress-holding.de</p>
+            <p>contact@progress-holding.de</p>
             <p>www.progress-holding.de</p>
           </div>
         </div>

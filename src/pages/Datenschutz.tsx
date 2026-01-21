@@ -72,29 +72,26 @@ function Datenschutz() {
             <h2>2. Hosting</h2>
             <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:</p>
             
-            <h3>Vercel</h3>
+            <h3>IONOS</h3>
             <p>
-              Anbieter ist die Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA (nachfolgend „Vercel").
+              Anbieter ist die IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Deutschland (nachfolgend „IONOS").
             </p>
             <p>
-              Wenn Sie unsere Website besuchen, erfasst Vercel verschiedene Logfiles inklusive Ihrer IP-Adressen.
-              Details entnehmen Sie der Datenschutzerklärung von Vercel:{' '}
-              <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">
-                https://vercel.com/legal/privacy-policy
+              Wenn Sie unsere Website besuchen, erfasst IONOS verschiedene Logfiles inklusive Ihrer IP-Adressen.
+              Details entnehmen Sie der Datenschutzerklärung von IONOS:{' '}
+              <a href="https://www.ionos.de/terms-gtc/datenschutzerklaerung/" target="_blank" rel="noopener noreferrer">
+                https://www.ionos.de/terms-gtc/datenschutzerklaerung/
               </a>
             </p>
             <p>
-              Die Verwendung von Vercel erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein
+              Die Verwendung von IONOS erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein
               berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website. Sofern eine
               entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage
               von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG.
             </p>
             <p>
-              Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt.
-              Details finden Sie hier:{' '}
-              <a href="https://vercel.com/legal/dpa" target="_blank" rel="noopener noreferrer">
-                https://vercel.com/legal/dpa
-              </a>
+              IONOS ist ein deutscher Anbieter mit Rechenzentren in Deutschland. Die Datenverarbeitung erfolgt
+              somit ausschließlich in der Europäischen Union.
             </p>
           </section>
 
@@ -123,13 +120,13 @@ function Datenschutz() {
             <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
             <p>
               <strong>pro.gress Holding GmbH (in Gründung)</strong><br />
-              [Straße und Hausnummer]<br />
-              [PLZ] [Ort]<br />
+              Lange Straße 75<br />
+              76530 Baden-Baden<br />
               Deutschland
             </p>
             <p>
-              Telefon: [Telefonnummer]<br />
-              E-Mail: <a href="mailto:info@progress-holding.de">info@progress-holding.de</a>
+              Telefon: +49 152 34186900<br />
+              E-Mail: <a href="mailto:contact@progress-holding.de">contact@progress-holding.de</a>
             </p>
             <p>
               Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit
