@@ -81,7 +81,7 @@ function StarField() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const starsRef = useRef<Star[]>([])
   const projectStarsRef = useRef<Star[]>([])
-  const animationRef = useRef<number>()
+  const animationRef = useRef<number | undefined>(undefined)
   const [hoveredStar, setHoveredStar] = useState<string | null>(null)
 
   const scrollToProject = useCallback((projectId: string) => {
