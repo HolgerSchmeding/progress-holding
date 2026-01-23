@@ -294,11 +294,6 @@ function Navigation() {
           <li><a href="#home" onClick={() => setIsMobileMenuOpen(false)}>Home</a></li>
           <li><a href="#about" onClick={() => setIsMobileMenuOpen(false)}>Über uns</a></li>
           <li><a href="#projects" onClick={() => setIsMobileMenuOpen(false)}>Projekte</a></li>
-          <li>
-            <a href="https://kanban.progress-holding.de" target="_blank" rel="noopener noreferrer">
-              Kanban-Board
-            </a>
-          </li>
           <li><a href="#news" onClick={() => setIsMobileMenuOpen(false)}>News & Blog</a></li>
         </ul>
       </div>
@@ -316,7 +311,7 @@ function HeroSection() {
           <span className="logo-pro">pro</span>
           <span className="logo-dot">.</span>
           <span className="logo-gress">gress</span>
-          <span className="hero-subtitle-inline"> Holding GmbH (in Gründung)</span>
+          <span className="hero-subtitle-inline"> Holding GmbH (i. G.)</span>
         </h1>
         <p className="hero-tagline">
           Strategische Beteiligungen für die Zukunft
@@ -456,8 +451,8 @@ function NewsSection() {
     {
       id: 3,
       date: '5. Januar 2026',
-      title: 'Kanban-Board für Transparenz',
-      excerpt: 'Ab sofort können Interessenten und Partner den Fortschritt unserer Projekte über unser öffentliches Kanban-Board verfolgen.',
+      title: 'Internes Projektmanagement optimiert',
+      excerpt: 'Mit unserem neuen Kanban-Board für Partner und Team-Mitglieder optimieren wir die interne Projektsteuerung und Kommunikation.',
       category: 'Updates'
     }
   ]
@@ -532,7 +527,6 @@ function Footer() {
               <li><a href="#home">Home</a></li>
               <li><a href="#about">Über uns</a></li>
               <li><a href="#projects">Projekte</a></li>
-              <li><a href="https://kanban.progress-holding.de" target="_blank" rel="noopener noreferrer">Kanban-Board</a></li>
             </ul>
           </div>
           <div className="footer-contact">
@@ -542,7 +536,7 @@ function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} pro.gress Holding GmbH (in Gründung). Alle Rechte vorbehalten.</p>
+          <p>&copy; {new Date().getFullYear()} pro.gress Holding GmbH (i. G.). Alle Rechte vorbehalten.</p>
           <div className="footer-legal">
             <Link to="/impressum">Impressum</Link>
             <Link to="/datenschutz">Datenschutz</Link>

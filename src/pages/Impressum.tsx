@@ -22,7 +22,7 @@ function Impressum() {
           <section className="legal-section">
             <h2>Angaben gemäß § 5 TMG</h2>
             <p>
-              <strong>pro.gress Holding GmbH (in Gründung)</strong><br />
+              <strong>pro.gress Holding GmbH (i. G.)</strong><br />
               Lange Straße 75<br />
               76530 Baden-Baden<br />
               Deutschland
@@ -148,7 +148,7 @@ function Impressum() {
 
       <footer className="legal-page-footer">
         <div className="container">
-          <p>&copy; {new Date().getFullYear()} pro.gress Holding GmbH (in Gründung). Alle Rechte vorbehalten.</p>
+          <p>&copy; {new Date().getFullYear()} pro.gress Holding GmbH (i. G.). Alle Rechte vorbehalten.</p>
         </div>
       </footer>
     </div>

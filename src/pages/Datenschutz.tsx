@@ -119,7 +119,7 @@ function Datenschutz() {
             <h3>Hinweis zur verantwortlichen Stelle</h3>
             <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
             <p>
-              <strong>pro.gress Holding GmbH (in Gründung)</strong><br />
+              <strong>pro.gress Holding GmbH (i. G.)</strong><br />
               Lange Straße 75<br />
               76530 Baden-Baden<br />
               Deutschland
@@ -319,7 +319,7 @@ function Datenschutz() {
 
       <footer className="legal-page-footer">
         <div className="container">
-          <p>&copy; {new Date().getFullYear()} pro.gress Holding GmbH (in Gründung). Alle Rechte vorbehalten.</p>
+          <p>&copy; {new Date().getFullYear()} pro.gress Holding GmbH (i. G.). Alle Rechte vorbehalten.</p>
         </div>
       </footer>
     </div>
