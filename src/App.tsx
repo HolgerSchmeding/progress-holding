@@ -63,7 +63,16 @@ const projects = [
     description: 'WEG-Community digitalisiert die Verwaltung und Kommunikation von Wohnungseigentümergemeinschaften. Die Plattform ermöglicht transparente Abstimmungen, Dokumentenverwaltung und effiziente Kommunikation zwischen Eigentümern und Verwaltern.',
     color: '#8b5cf6',
     icon: '🏠',
-    status: 'Konzeptphase'
+    status: 'In Entwicklung'
+  },
+  {
+    id: 'check-my-price',
+    name: 'Check my price',
+    tagline: 'Der intelligente AI-Agent für den besten Reisepreis',
+    description: 'Check my price revolutioniert den Reise-Preisvergleich durch künstliche Intelligenz. Nutzer laden ihr Flug- oder Hotelangebot einfach als Foto oder PDF hoch – unser AI-Agent prüft in Echtzeit, ob es günstigere Alternativen gibt. Das System validiert den Bestpreis und liefert sofort buchbare, kosteneffiziente Gegenangebote.',
+    color: '#ec4899',
+    icon: '🔍',
+    status: 'Ideenphase'
   }
 ]
 
