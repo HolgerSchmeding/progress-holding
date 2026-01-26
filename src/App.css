@@ -955,11 +955,6 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .navbar {
-    background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(10px);
-  }
-
   .mobile-menu-btn {
     display: flex;
   }
@@ -986,6 +981,7 @@
 
   .hero-content {
     padding: 1rem;
+    padding-top: 5rem;
   }
 
   .hero-cta {
