@@ -144,7 +144,7 @@ function StarField() {
           id: index + 1000,
           x: centerX + Math.cos(angle) * radius,
           y: centerY + Math.sin(angle) * radius,
-          size: 6,
+          size: 4,
           opacity: 0.9,
           twinkleSpeed: 0.025,
           projectId: project.id
@@ -178,14 +178,14 @@ function StarField() {
         // Outer glow
         const gradient = ctx.createRadialGradient(
           star.x, star.y, 0,
-          star.x, star.y, star.size * 8
+          star.x, star.y, star.size * 6
         )
-        gradient.addColorStop(0, color + 'aa')
-        gradient.addColorStop(0.5, color + '44')
+        gradient.addColorStop(0, color + '99')
+        gradient.addColorStop(0.5, color + '33')
         gradient.addColorStop(1, 'transparent')
         
         ctx.beginPath()
-        ctx.arc(star.x, star.y, star.size * 8 * pulse, 0, Math.PI * 2)
+        ctx.arc(star.x, star.y, star.size * 6 * pulse, 0, Math.PI * 2)
         ctx.fillStyle = gradient
         ctx.fill()
 
