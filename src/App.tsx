@@ -452,6 +452,40 @@ interface NewsItem {
 
 const newsData: NewsItem[] = [
   {
+    id: 5,
+    date: 'Januar 2026',
+    title: 'pro.gress Holding unterstützt „24h-Gründung" – GovTech-Offensive für den Standort Deutschland',
+    excerpt: 'Die Modernisierung der deutschen Verwaltung nimmt Fahrt auf. Die pro.gress Holding GmbH positioniert sich mit ihrer Initiative startup24h als zentraler Akteur, um den bürokratischen Quantensprung zur 24-Stunden-Gründung operativ umzusetzen.',
+    category: 'GovTech',
+    fullContent: `Baden-Baden, Januar 2026 – Die Modernisierung der deutschen Verwaltung nimmt Fahrt auf. Das Bundesministerium für Digitales und Staatsmodernisierung (BMDS) unter Minister Karsten Wildberger (CDU) hat die digitale Unternehmensgründung innerhalb von 24 Stunden zu einem Leuchtturmprojekt erklärt. Die pro.gress Holding GmbH positioniert sich mit ihrer Initiative startup24h als zentraler Akteur, um diesen bürokratischen Quantensprung operativ umzusetzen.
+
+**Antwort auf den bürokratischen Reformdruck**
+
+Deutschland steht aktuell vor einer massiven Hürde: Während internationale Vorbilder wie Estland Gründungen in Rekordzeit ermöglichen, dauert der Prozess hierzulande im Schnitt vier bis sechs Wochen. Drei Viertel aller Gründer:innen sehen im Abbau dieser Bürokratie die wichtigste politische Priorität.
+
+Das geplante Gründungsbeschleunigungsgesetz soll nun den rechtlichen Rahmen schaffen, um die langwierigen, fragmentierten Prozesse durch eine teilautomatisierte, digitale Lösung zu ersetzen.
+
+**startup24h: Die Brücke zur 24-Stunden-Gründung**
+
+Die Initiative startup24h der pro.gress Holding greift die Ziele des Ministeriums direkt auf. Als „AI-First"-Plattform ist sie darauf ausgelegt, die föderale Verantwortungsteilung zwischen Bund, Ländern und Kommunen technisch zu überbrücken.
+
+**Orchestrierung statt Silos:** Die Plattform nutzt einen „Dachantrag", der alle relevanten Verfahren – vom Notartermin bis zur Gewerbeanmeldung – parallel anstößt.
+
+**Automatisierung durch KI:** Durch den Einsatz von Künstlicher Intelligenz werden strukturierte Daten geschaffen, die vollautomatisierte Antragsprozesse erst ermöglichen.
+
+**Once-Only-Prinzip:** Durch die Anbindung an das Nationale Once-Only-Technical-System (NOOTS) müssen Nachweise nur noch einmal eingereicht werden.
+
+**Europäische Dimension: EUDI-Wallet und Binnenmarkt**
+
+Die deutsche Initiative bettet sich in ein größeres europäisches Bestreben ein. Ziel ist es, die Hürden im Binnenmarkt abzubauen und langfristig eine EU-weite Unternehmensgründung innerhalb kürzester Zeit zu ermöglichen. Die Nutzung der EUDI-Wallet (European Digital Identity) spielt hierbei eine Schlüsselrolle, um Identitätsprüfungen und digitale Signaturen grenzüberschreitend sicherzustellen.
+
+**Fazit**
+
+Für die pro.gress Holding ist startup24h mehr als ein Geschäftsmodell – es ist ein aktiver Beitrag zur Staatsmodernisierung. Durch die Verknüpfung von moderner GovTech-Infrastruktur mit den politischen Zielen des BMDS wird die Vision einer „Gründung in 24 Stunden" von der Theorie in die Praxis überführt.
+
+*Das pro.gress Team*`
+  },
+  {
     id: 1,
     date: 'Januar 2026',
     title: 'pro.gress Holding startet ins neue Jahr: 2026 wird das Jahr der Realisierung',
