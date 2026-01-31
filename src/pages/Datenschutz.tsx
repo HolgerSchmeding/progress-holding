@@ -38,11 +38,12 @@ function Datenschutz() {
             <h2>2. Datenschutz auf einen Blick</h2>
             <p>
               Beim Besuch dieser Website werden technische Daten verarbeitet, die zur Bereitstellung und Sicherheit 
-              der Website erforderlich sind (Server-Logfiles). Darüber hinaus verarbeiten wir personenbezogene Daten 
-              nur, wenn Sie uns diese aktiv mitteilen (z. B. per E-Mail).
+              der Website erforderlich sind (Server-Logfiles). Mit Ihrer Einwilligung setzen wir zudem Google Analytics 
+              zur Analyse des Nutzungsverhaltens ein.
             </p>
             <p>
-              Ein Tracking oder eine Analyse Ihres Nutzungsverhaltens findet nicht statt.
+              Vor dem Einsatz von Analyse-Cookies holen wir Ihre ausdrückliche Einwilligung über unseren 
+              Cookie-Consent-Banner ein. Sie können Ihre Einwilligung jederzeit widerrufen.
             </p>
           </section>
 
@@ -114,11 +115,54 @@ function Datenschutz() {
           </section>
 
           <section className="legal-section">
-            <h2>6. Cookies</h2>
+            <h2>6. Cookies und Google Analytics</h2>
+            <h3>6.1 Cookies allgemein</h3>
             <p>
-              Diese Website setzt nur technisch erforderliche Cookies bzw. vergleichbare Technologien ein, soweit 
-              dies für den Betrieb der Website notwendig ist. Einwilligungspflichtige Cookies/Technologien zu 
-              Analyse- oder Marketingzwecken werden nicht eingesetzt.
+              Diese Website verwendet Cookies. Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert 
+              werden. Einige Cookies sind technisch notwendig (essenzielle Cookies), andere dienen der Analyse 
+              Ihres Nutzungsverhaltens (Analyse-Cookies).
+            </p>
+            
+            <h3>6.2 Cookie-Consent</h3>
+            <p>
+              Beim ersten Besuch unserer Website zeigen wir Ihnen einen Cookie-Consent-Banner. Dort können Sie 
+              entscheiden, ob Sie nur essenzielle Cookies oder auch Analyse-Cookies zulassen möchten. Ihre 
+              Entscheidung wird in Ihrem Browser gespeichert, sodass Sie den Banner bei späteren Besuchen 
+              nicht erneut sehen.
+            </p>
+            <p>
+              <strong>Widerruf Ihrer Einwilligung:</strong> Sie können Ihre Einwilligung jederzeit widerrufen, 
+              indem Sie die Cookies in Ihren Browsereinstellungen löschen oder den localStorage-Eintrag 
+              „cookie-consent" entfernen. Beim nächsten Besuch wird der Cookie-Banner erneut angezeigt.
+            </p>
+            
+            <h3>6.3 Google Analytics 4</h3>
+            <p>
+              Diese Website nutzt Google Analytics 4, einen Webanalysedienst der Google Ireland Limited 
+              („Google"), Gordon House, Barrow Street, Dublin 4, Irland.
+            </p>
+            <p><strong>Umfang der Verarbeitung:</strong></p>
+            <ul>
+              <li>Wir haben die IP-Anonymisierung aktiviert. Ihre IP-Adresse wird innerhalb von Mitgliedstaaten 
+              der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen 
+              Wirtschaftsraum gekürzt.</li>
+              <li>Google Analytics 4 verwendet Cookies, die eine Analyse der Benutzung der Website ermöglichen.</li>
+              <li>Die durch das Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der 
+              Regel an einen Server von Google in den USA übertragen und dort gespeichert.</li>
+            </ul>
+            <p><strong>Zweck:</strong> Analyse des Nutzungsverhaltens zur Verbesserung unserer Website.</p>
+            <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung über Cookie-Banner).</p>
+            <p><strong>Speicherdauer:</strong> Die von uns gesendeten und mit Cookies verknüpften Daten werden 
+            nach 14 Monaten automatisch gelöscht.</p>
+            <p>
+              <strong>Drittlandübermittlung:</strong> Google ist unter dem EU-US Data Privacy Framework zertifiziert, 
+              was ein angemessenes Datenschutzniveau gewährleistet. Weitere Informationen finden Sie in der 
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+                Datenschutzerklärung von Google
+              </a>.
+            </p>
+            <p>
+              <strong>Measurement ID:</strong> G-VB7PN37QE7
             </p>
           </section>
 

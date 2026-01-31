@@ -1,0 +1,15 @@
+# robots.txt für pro.gress Holding GmbH
+# https://www.progress-holding.de
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.progress-holding.de/sitemap.xml
+
+# Crawl-delay (optional, wird nicht von allen Bots respektiert)
+Crawl-delay: 1
+
+# Blockiere bestimmte Pfade (falls nötig)
+# Disallow: /admin/
+# Disallow: /private/

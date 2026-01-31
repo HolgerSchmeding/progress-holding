@@ -3,9 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="pro.gress Holding GmbH - Strategische Beteiligungen und innovative Startup-Projekte" />
-    <title>pro.gress Holding GmbH</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>pro.gress Holding GmbH | Strategische Beteiligungen & Innovative Startups</title>
+    <meta name="title" content="pro.gress Holding GmbH | Strategische Beteiligungen & Innovative Startups" />
+    <meta name="description" content="pro.gress Holding GmbH - Ihre Beteiligungsgesellschaft für innovative Startup-Projekte. Wir investieren in zukunftsweisende Technologien und digitale Geschäftsmodelle." />
+    <meta name="keywords" content="Holding, Beteiligungsgesellschaft, Startup, Investment, Innovation, Digitalisierung, GmbH, Deutschland" />
+    <meta name="author" content="pro.gress Holding GmbH" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.progress-holding.de/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.progress-holding.de/" />
+    <meta property="og:title" content="pro.gress Holding GmbH | Strategische Beteiligungen & Innovative Startups" />
+    <meta property="og:description" content="pro.gress Holding GmbH - Ihre Beteiligungsgesellschaft für innovative Startup-Projekte. Wir investieren in zukunftsweisende Technologien und digitale Geschäftsmodelle." />
+    <meta property="og:image" content="https://www.progress-holding.de/og-image.png" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content="pro.gress Holding GmbH" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.progress-holding.de/" />
+    <meta property="twitter:title" content="pro.gress Holding GmbH | Strategische Beteiligungen & Innovative Startups" />
+    <meta property="twitter:description" content="pro.gress Holding GmbH - Ihre Beteiligungsgesellschaft für innovative Startup-Projekte." />
+    <meta property="twitter:image" content="https://www.progress-holding.de/og-image.png" />
+    
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#0a1628" />
+    <meta name="format-detection" content="telephone=no" />
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "pro.gress Holding GmbH",
+      "url": "https://www.progress-holding.de",
+      "logo": "https://www.progress-holding.de/favicon.svg",
+      "description": "Strategische Beteiligungsgesellschaft für innovative Startup-Projekte und digitale Geschäftsmodelle.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "DE"
+      },
+      "sameAs": []
+    }
+    </script>
+    
+    <!-- Google Analytics 4 wird erst nach Cookie-Consent geladen -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      // Prüfe ob Consent gegeben wurde
+      function loadGoogleAnalytics() {
+        if (localStorage.getItem('cookie-consent') === 'accepted') {
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=G-VB7PN37QE7';
+          document.head.appendChild(script);
+          
+          script.onload = function() {
+            gtag('js', new Date());
+            gtag('config', 'G-VB7PN37QE7', {
+              'anonymize_ip': true
+            });
+          };
+        }
+      }
+      
+      // Lade GA wenn Consent bereits gegeben
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', loadGoogleAnalytics);
+      } else {
+        loadGoogleAnalytics();
+      }
+    </script>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">

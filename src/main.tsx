@@ -5,6 +5,7 @@ import './index.css'
 import App from './App.tsx'
 import Impressum from './pages/Impressum.tsx'
 import Datenschutz from './pages/Datenschutz.tsx'
+import CookieConsent from './components/CookieConsent.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/impressum" element={<Impressum />} />
         <Route path="/datenschutz" element={<Datenschutz />} />
       </Routes>
+      <CookieConsent />
     </BrowserRouter>
   </StrictMode>,
 )
