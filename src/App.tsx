@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState, useCallback } from 'react'
+﻿import { useEffect, useRef, useState, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import './App.css'
 import { useLanguage, type Language } from './context/LanguageContext'
 import { useTranslation } from './i18n'
 
-// Custom Hook für Scroll-Animationen
+// Custom Hook fÃ¼r Scroll-Animationen
 function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
@@ -35,50 +35,50 @@ const projects = [
     id: 'benchtrust',
     name: 'BenchTrust GmbH',
     tagline: 'BenchTrust ist eine digitale Market Intelligence Plattform',
-    description: 'BenchTrust ist die erste Plattform, die trusted data, peer insights und KI-gestützte Automatisierung kombiniert, um den gesamten Beschaffungsprozess in Unternehmen schneller, einfacher und smarter zu machen.',
+    description: 'BenchTrust ist die erste Plattform, die trusted data, peer insights und KI-gestÃ¼tzte Automatisierung kombiniert, um den gesamten Beschaffungsprozess in Unternehmen schneller, einfacher und smarter zu machen.',
     color: '#3b82f6',
-    icon: '📊',
+    icon: 'ðŸ“Š',
     status: 'In Entwicklung'
   },
   {
     id: 'startup24h',
     name: 'startup24h',
-    tagline: 'Wir bauen die digitale Überholspur für Gründer.',
-    description: 'startup24h verwandelt den politischen Willen zur 24-Stunden-Gründung in Realität – mit einer Plattform, die Wartezeiten abschafft: Vollständig digital, rechtssicher und startklar in nur 24 Stunden.',
+    tagline: 'Wir bauen die digitale Ãœberholspur fÃ¼r GrÃ¼nder.',
+    description: 'startup24h verwandelt den politischen Willen zur 24-Stunden-GrÃ¼ndung in RealitÃ¤t â€“ mit einer Plattform, die Wartezeiten abschafft: VollstÃ¤ndig digital, rechtssicher und startklar in nur 24 Stunden.',
     color: '#f59e0b',
-    icon: '🚀',
+    icon: 'ðŸš€',
     status: 'In Planung'
   },
   {
     id: 'vat-reclaim',
     name: 'VAT-Reclaim',
-    tagline: 'Automatisierte Mehrwertsteuerrückerstattung',
-    description: 'VAT-Reclaim automatisiert den komplexen Prozess der Mehrwertsteuerrückerstattung für Unternehmen. Durch intelligente Dokumentenverarbeitung und direkte Behördenschnittstellen werden Erstattungen schneller und effizienter abgewickelt.',
+    tagline: 'Automatisierte MehrwertsteuerrÃ¼ckerstattung',
+    description: 'VAT-Reclaim automatisiert den komplexen Prozess der MehrwertsteuerrÃ¼ckerstattung fÃ¼r Unternehmen. Durch intelligente Dokumentenverarbeitung und direkte BehÃ¶rdenschnittstellen werden Erstattungen schneller und effizienter abgewickelt.',
     color: '#10b981',
-    icon: '💰',
+    icon: 'ðŸ’°',
     status: 'In Entwicklung'
   },
   {
     id: 'weg-community',
     name: 'WEG-Community',
-    tagline: 'Digitale Plattform für Wohnungseigentümergemeinschaften',
-    description: 'WEG-Community digitalisiert die Verwaltung und Kommunikation von Wohnungseigentümergemeinschaften. Die Plattform ermöglicht transparente Abstimmungen, Dokumentenverwaltung und effiziente Kommunikation zwischen Eigentümern und Verwaltern.',
+    tagline: 'Digitale Plattform fÃ¼r WohnungseigentÃ¼mergemeinschaften',
+    description: 'WEG-Community digitalisiert die Verwaltung und Kommunikation von WohnungseigentÃ¼mergemeinschaften. Die Plattform ermÃ¶glicht transparente Abstimmungen, Dokumentenverwaltung und effiziente Kommunikation zwischen EigentÃ¼mern und Verwaltern.',
     color: '#8b5cf6',
-    icon: '🏠',
+    icon: 'ðŸ ',
     status: 'In Entwicklung'
   },
   {
     id: 'check-my-price',
     name: 'Check my price',
-    tagline: 'Der intelligente AI-Agent für den besten Reisepreis',
-    description: 'Check my price revolutioniert den Reise-Preisvergleich durch künstliche Intelligenz. Nutzer laden ihr Flug- oder Hotelangebot einfach als Foto oder PDF hoch – unser AI-Agent prüft in Echtzeit, ob es günstigere Alternativen gibt. Das System validiert den Bestpreis und liefert sofort buchbare, kosteneffiziente Gegenangebote.',
+    tagline: 'Der intelligente AI-Agent fÃ¼r den besten Reisepreis',
+    description: 'Check my price revolutioniert den Reise-Preisvergleich durch kÃ¼nstliche Intelligenz. Nutzer laden ihr Flug- oder Hotelangebot einfach als Foto oder PDF hoch â€“ unser AI-Agent prÃ¼ft in Echtzeit, ob es gÃ¼nstigere Alternativen gibt. Das System validiert den Bestpreis und liefert sofort buchbare, kosteneffiziente Gegenangebote.',
     color: '#ec4899',
-    icon: '🔍',
+    icon: 'ðŸ”',
     status: 'Ideenphase'
   }
 ]
 
-// Star Component für den animierten Sternenhimmel
+// Star Component fÃ¼r den animierten Sternenhimmel
 interface Star {
   id: number
   x: number
@@ -135,7 +135,7 @@ function StarField() {
         twinkleSpeed: Math.random() * 0.02 + 0.01
       }))
 
-      // Projekt-Sterne (größere, hellere Sterne) - in einem Kreis angeordnet
+      // Projekt-Sterne (grÃ¶ÃŸere, hellere Sterne) - in einem Kreis angeordnet
       const centerX = canvas.width / 2
       const centerY = canvas.height / 2
       const radius = Math.min(canvas.width, canvas.height) * 0.22
@@ -394,22 +394,22 @@ function AboutSection() {
         <h2 className="section-title">{t.about.sectionTitle} <span className="logo-pro">pro</span><span className="logo-dot">.</span><span className="logo-gress">gress</span></h2>
         <div ref={ref} className={`about-grid ${isVisible ? 'animate-in' : ''}`}>
           <div className="about-card">
-            <div className="about-icon">🎯</div>
+            <div className="about-icon">ðŸŽ¯</div>
             <h3>{t.about.vision}</h3>
             <p>{t.about.visionText}</p>
           </div>
           <div className="about-card">
-            <div className="about-icon">🚀</div>
+            <div className="about-icon">ðŸš€</div>
             <h3>{t.about.strategy}</h3>
             <p>{t.about.strategyText}</p>
           </div>
           <div className="about-card">
-            <div className="about-icon">🤝</div>
+            <div className="about-icon">ðŸ¤</div>
             <h3>{t.about.values}</h3>
             <p>{t.about.valuesText}</p>
           </div>
           <div className="about-card">
-            <div className="about-icon">⚡</div>
+            <div className="about-icon">âš¡</div>
             <h3>{t.about.agility}</h3>
             <p>{t.about.agilityText}</p>
           </div>
@@ -490,169 +490,6 @@ interface NewsItem {
   fullContent?: string
 }
 
-const newsData: NewsItem[] = [
-  {
-    id: 5,
-    date: 'Januar 2026',
-    title: 'pro.gress Holding unterstützt „24h-Gründung" – GovTech-Offensive für den Standort Deutschland',
-    excerpt: 'Die Modernisierung der deutschen Verwaltung nimmt Fahrt auf. Die pro.gress Holding GmbH positioniert sich mit ihrer Initiative startup24h als zentraler Akteur, um den bürokratischen Quantensprung zur 24-Stunden-Gründung operativ umzusetzen.',
-    category: 'GovTech',
-    fullContent: `Baden-Baden, Januar 2026 – Die Modernisierung der deutschen Verwaltung nimmt Fahrt auf. Das Bundesministerium für Digitales und Staatsmodernisierung (BMDS) unter Minister Karsten Wildberger (CDU) hat die digitale Unternehmensgründung innerhalb von 24 Stunden zu einem Leuchtturmprojekt erklärt. Die pro.gress Holding GmbH positioniert sich mit ihrer Initiative startup24h als zentraler Akteur, um diesen bürokratischen Quantensprung operativ umzusetzen.
-
-**Antwort auf den bürokratischen Reformdruck**
-
-Deutschland steht aktuell vor einer massiven Hürde: Während internationale Vorbilder wie Estland Gründungen in Rekordzeit ermöglichen, dauert der Prozess hierzulande im Schnitt vier bis sechs Wochen. Drei Viertel aller Gründer:innen sehen im Abbau dieser Bürokratie die wichtigste politische Priorität.
-
-Das geplante Gründungsbeschleunigungsgesetz soll nun den rechtlichen Rahmen schaffen, um die langwierigen, fragmentierten Prozesse durch eine teilautomatisierte, digitale Lösung zu ersetzen.
-
-**startup24h: Die Brücke zur 24-Stunden-Gründung**
-
-Die Initiative startup24h der pro.gress Holding greift die Ziele des Ministeriums direkt auf. Als „AI-First"-Plattform ist sie darauf ausgelegt, die föderale Verantwortungsteilung zwischen Bund, Ländern und Kommunen technisch zu überbrücken.
-
-**Orchestrierung statt Silos:** Die Plattform nutzt einen „Dachantrag", der alle relevanten Verfahren – vom Notartermin bis zur Gewerbeanmeldung – parallel anstößt.
-
-**Automatisierung durch KI:** Durch den Einsatz von Künstlicher Intelligenz werden strukturierte Daten geschaffen, die vollautomatisierte Antragsprozesse erst ermöglichen.
-
-**Once-Only-Prinzip:** Durch die Anbindung an das Nationale Once-Only-Technical-System (NOOTS) müssen Nachweise nur noch einmal eingereicht werden.
-
-**Europäische Dimension: EUDI-Wallet und Binnenmarkt**
-
-Die deutsche Initiative bettet sich in ein größeres europäisches Bestreben ein. Ziel ist es, die Hürden im Binnenmarkt abzubauen und langfristig eine EU-weite Unternehmensgründung innerhalb kürzester Zeit zu ermöglichen. Die Nutzung der EUDI-Wallet (European Digital Identity) spielt hierbei eine Schlüsselrolle, um Identitätsprüfungen und digitale Signaturen grenzüberschreitend sicherzustellen.
-
-**Fazit**
-
-Für die pro.gress Holding ist startup24h mehr als ein Geschäftsmodell – es ist ein aktiver Beitrag zur Staatsmodernisierung. Durch die Verknüpfung von moderner GovTech-Infrastruktur mit den politischen Zielen des BMDS wird die Vision einer „Gründung in 24 Stunden" von der Theorie in die Praxis überführt.
-
-*Das pro.gress Team*`
-  },
-  {
-    id: 1,
-    date: 'Januar 2026',
-    title: 'pro.gress Holding startet ins neue Jahr: 2026 wird das Jahr der Realisierung',
-    excerpt: 'Mit vier spannenden Projekten im Portfolio blicken wir optimistisch auf 2026. Unsere Strategie der diversifizierten Beteiligungen nimmt Form an – jetzt gehen wir von der Planung in die Umsetzung.',
-    category: 'Unternehmen',
-    fullContent: `Baden-Baden, Januar 2026 – Das Jahr 2025 stand ganz im Zeichen der Fundamentlegung. Wir haben Konzepte geschärft, das Team aufgestellt und die technologische Basis geschaffen. Jetzt, zum Start des Jahres 2026, beginnt eine neue Phase. Die pro.gress Holding startet fokussiert in das Geschäftsjahr: Wir verwalten nicht nur Ideen, wir überführen sie jetzt in funktionierende Geschäftsmodelle.
-
-**Unser Portfolio: Fokus auf Proof of Concept**
-
-Unser Ansatz „Qualität vor Quantität" bedeutet für 2026 ganz konkret: Wir wollen beweisen, dass unsere Lösungen im Markt funktionieren. Für drei unserer Ventures steht der Proof of Concept (PoC) und der Go-Live in diesem Jahr fest auf der Agenda:
-
-**BenchTrust (SaaS / Procurement):** Unser Fokus-Projekt für den B2B-Einkauf bereitet sich intensiv auf den Marktstart vor. Ziel für 2026 ist der erfolgreiche Live-Gang, um erste echte Transaktionen abzuwickeln und zu beweisen, dass Transparenz im Dienstleistungsmarkt einen echten Mehrwert bietet.
-
-**startup24h (GovTech):** Hier arbeiten wir an der digitalen Infrastruktur, um das politische Ziel der „Gründung in 24 Stunden" technisch möglich zu machen. 2026 wird zeigen, wie wir bürokratische Hürden durch intelligente Softwarestrecken ersetzen können.
-
-**VAT Reclaim (FinTech):** Auch hier steht der Proof of Concept für 2026 an. Wir wollen validieren, wie wir durch automatisierte Prozesse Cashflow-Vorteile für Unternehmen bei der Steuerrückforderung realisieren können.
-
-**WEG Community (PropTech):** Unser Projekt für die Immobilienwirtschaft zielt darauf ab, die Verwaltung von Wohneigentumsgemeinschaften zu digitalisieren. Der geplante Go-Live in 2026 soll die Effizienzgewinne in der Praxis unter Beweis stellen.
-
-**Starke Basis: Synergien im Hintergrund**
-
-Was uns die nötige Ruhe für diese Launches gibt, ist unser „Shared Services"-Modell in der Holding. Unsere Ventures müssen das Rad nicht neu erfinden, sondern greifen auf gemeinsame Ressourcen zu:
-
-**Zentrale Technologie:** Wir nutzen bewährte Architektur-Bausteine für alle Projekte, um die „Time-to-Market" für die PoCs zu verkürzen.
-
-**SME-Expertenpool:** Unsere Fachleute für Recht, Technik und Vertrieb unterstützen genau dort, wo ein Projekt gerade in die heiße Phase geht.
-
-**Ausblick: Validierung im echten Markt**
-
-Für 2026 lautet die Devise: Marktvalidierung. Wir verlassen die Konzeptphase. Es geht in diesem Jahr darum, mit echten Nutzern und echten Daten zu arbeiten, um unsere Annahmen zu bestätigen und die Geschäftsmodelle nachhaltig aufzubauen.
-
-Wir danken unserem Team und unseren Partnern für die akribische Vorarbeit in 2025. Die Weichen sind gestellt – jetzt bringen wir die Projekte auf die Straße.
-
-Auf ein erfolgreiches Jahr 2026!
-
-*Holger Schmeding & das pro.gress Team*`
-  },
-  {
-    id: 2,
-    date: 'Januar 2026',
-    title: 'BenchTrust Development Update: Der Countdown für die smarte Beschaffung läuft',
-    excerpt: 'Die KI-gestützte Einkaufsplattform BenchTrust hat einen entscheidenden Entwicklungsmeilenstein erreicht. Das technische Fundament steht – der Startschuss für den operativen Pilotbetrieb fällt in Kürze.',
-    category: 'Projekte',
-    fullContent: `Baden-Baden, Januar 2026 – BenchTrust ist angetreten, um mehr zu sein als nur ein Vergleichsportal. Wir bauen das Betriebssystem für den modernen B2B-Einkauf. Nach monatelanger intensiver Entwicklungsarbeit an unserer Core-Engine können wir heute bestätigen: Die Architektur für unsere ganzheitliche Einkaufsplattform ist bereit für den Einsatz.
-
-**Vom Suchen zum Finden: Die „Procurement Engine" steht**
-
-Unser Entwicklerteam hat in den letzten Wochen den komplexesten Teil der Plattform fertiggestellt: Den AI-Sourcing Core. Damit sind wir nun technisch in der Lage, den gesamten Beschaffungsprozess digital abzubilden – von der Bedarfsermittlung bis zum perfekten Match. Das Versprechen „Daten schlagen Bauchgefühl" wurde erfolgreich in Code übersetzt. BenchTrust ist damit bereit, Unternehmen nicht nur Informationen zu zeigen, sondern sie aktiv durch den Entscheidungsprozess zu navigieren.
-
-Die kommenden Wochen nutzen wir für den finalen Feinschliff an der User Experience (UX) und die Integration der Schnittstellen für unsere Pilotpartner.
-
-**Was die Beta-Phase bietet**
-
-Der anstehende Start des Proof of Concept (PoC) wird ausgewählten Nutzern erstmals Zugang zu den leistungsstarken Werkzeugen der Plattform geben:
-
-**Der Sourcing Copilot:** KI-gestützte Erstellung von professionellen Ausschreibungsunterlagen (RFPs) in Minuten statt Wochen.
-
-**Smart Analytics:** Datenbasierte Entscheidungshilfen, die Angebote objektiv vergleichbar machen.
-
-**Intelligentes Matching:** Der Algorithmus verbindet Unternehmen nicht nur mit „irgendeinem" Anbieter, sondern mit dem Partner, der exakt zum Anforderungsprofil passt.
-
-**Call for Pilots: Gestalten Sie den Standard von morgen**
-
-Der Pilotbetrieb startet in Kürze und ist auf eine limitierte Anzahl an Unternehmen beschränkt, um eine enge Betreuung und direktes Feedback zu gewährleisten. Wir suchen Einkaufsentscheider und Geschäftsführer, die ihre Beschaffungsprozesse radikal vereinfachen und digitalisieren wollen.
-
-Interessiert an einem exklusiven Zugang? Setzen Sie sich jetzt auf die Warteliste für den Start im April.`
-  },
-  {
-    id: 3,
-    date: 'Januar 2026',
-    title: 'Internes Projektmanagement optimiert: Transparenz als Wachstumsmotor',
-    excerpt: 'Mit der Einführung unseres neuen zentralen Kanban-Boards für Partner und Team-Mitglieder heben wir die interne Projektsteuerung auf ein neues Level. Schluss mit E-Mail-Pingpong – wir setzen auf radikale Transparenz und asynchrone Kommunikation.',
-    category: 'Updates',
-    fullContent: `Baden-Baden, Januar 2026 – Ein Venture Studio zu steuern, ist ein komplexes Unterfangen. Mit vier parallelen Projekten (BenchTrust, startup24h, VAT Reclaim, WEG Community) und einem wachsenden Pool an Experten (SMEs) stoßen klassische Management-Methoden schnell an ihre Grenzen. Um unsere ehrgeizigen Ziele für 2026 zu erreichen, haben wir unsere interne Arbeitsweise neu organisiert.
-
-**Die Herausforderung: Multi-Projekt-Steuerung**
-
-In unserem Modell teilen sich die Ventures zentrale Ressourcen. Ein Rechtsexperte prüft heute Verträge für die Holding und morgen AGBs für BenchTrust. Ein Entwickler springt zwischen API-Integration und Frontend-Design. Um hier Reibungsverluste zu vermeiden, haben wir eine zentrale Plattform für Collaboration & Execution implementiert.
-
-**Das neue Kanban-System: Single Source of Truth**
-
-Unser neu eingeführtes Kanban-Board ist ab sofort das zentrale Nervensystem der pro.gress Holding. Es bietet allen Beteiligten – vom Gesellschafter über den Freelancer bis zum strategischen Partner – einen Echtzeit-Einblick in den Status Quo:
-
-**Venture-Übergreifende Sicht:** Wir sehen auf einen Blick, welche Ressourcen in welches Projekt fließen.
-
-**Klarer Fokus:** Durch „Work-in-Progress"-Limits (WIP) verhindern wir Verzettelung. Es wird nur daran gearbeitet, was den größten Wertbeitrag liefert.
-
-**SME-Integration:** Unsere externen Experten können sich nahtlos einklinken, Aufgaben ziehen und Ergebnisse liefern, ohne in endlosen Abstimmungsmeetings zu sitzen.
-
-**Kulturwandel: Asynchrone Effizienz**
-
-Dieses Tool ist mehr als nur Software – es ist ein Ausdruck unserer Unternehmenskultur. Wir glauben an „Deep Work" und Ergebnisse. Das neue Board ermöglicht es uns, Kommunikationswege zu verkürzen und Meeting-Zeiten drastisch zu reduzieren. Jeder Partner weiß zu jeder Zeit: Was ist fertig? Wo gibt es Blocker? Was ist der nächste Schritt?
-
-Damit ist das operative Fundament gelegt, um die Skalierung unserer Ventures im Jahr 2026 effizient zu bewältigen.`
-  },
-  {
-    id: 4,
-    date: 'Januar 2026',
-    title: '„No-Touch-Finance": Wie KI unsere Buchhaltung revolutioniert',
-    excerpt: 'Innovation endet oft dort, wo die Bürokratie beginnt. Nicht bei uns. Mit einer neuen „Best-of-Breed"-Finanzarchitektur automatisieren wir die Buchhaltung unserer Ventures nahezu vollständig – und schaffen so Skalierbarkeit auf Knopfdruck.',
-    category: 'Updates',
-    fullContent: `Baden-Baden, Januar 2026 – Wer schnell wachsen will, darf sich nicht von administrativen Hürden bremsen lassen. Für die pro.gress Holding und ihre Beteiligungen (BenchTrust, VAT Reclaim, WEG Community) haben wir deshalb eine zentrale Entscheidung getroffen: Wir verabschieden uns von manueller Belegerfassung und setzen auf eine voll integrierte „Automated SaaS Finance"-Lösung.
-
-**Der Motor: Stripe trifft BuchhaltungsButler**
-
-Unser neues Setup verbindet drei leistungsstarke Systeme zu einer nahtlosen Einheit:
-
-**Die Finanz-Maschine:** Stripe übernimmt nicht nur das Payment, sondern fungiert als intelligente Debitorenbuchhaltung inkl. automatischem Steuer-Management (Stripe Tax) für komplexe B2B-Fälle.
-
-**Die Zentrale:** BuchhaltungsButler dient als KI-gestützter Hub, der Zahlungsdaten und Belege via API in Echtzeit abgleicht.
-
-**Das Banking:** Unsere Geschäftskonten sind direkt angebunden, sodass Geldflüsse (Transit) automatisch erkannt werden.
-
-Das Ergebnis ist eine „No-Touch"-Buchhaltung: Wenn ein Kunde bei BenchTrust ein Abo bucht, wird die Rechnung erstellt, die Steuer berechnet, die Zahlung verbucht und der Buchungssatz gebildet – ohne dass ein Mensch eingreifen muss.
-
-**Blueprint für Skalierung**
-
-Der wahre Vorteil liegt in der Struktur. Wir nutzen dieses Setup als Standard-Blaupause für alle Ventures der Holding. Ob wir morgen startup24h starten oder eine neue Tochtergesellschaft gründen: Das Finanz-System ist sofort einsatzbereit. Wir legen lediglich einen neuen Mandanten an, doch die Prozesse bleiben identisch.
-
-**Sicherheit und Transparenz**
-
-Trotz der Automatisierung behalten wir durch eine saubere Trennung der Accounts die volle Kontrolle. Jedes Venture agiert operativ eigenständig („Firewall-Prinzip"), während die Holding über zentrale Dashboards die Liquidität steuert.
-
-Mit dieser Infrastruktur reduzieren wir unsere administrativen Fixkosten drastisch und stellen sicher, dass jeder investierte Euro in Produkt und Vertrieb fließt – nicht in die Verwaltung.`
-  }
-]
-
 // News Detail Modal
 function NewsModal({ news, onClose }: { news: NewsItem; onClose: () => void }) {
   const t = useTranslation()
@@ -678,7 +515,7 @@ function NewsModal({ news, onClose }: { news: NewsItem; onClose: () => void }) {
           </div>
         )
       }
-      // Abschnittsüberschriften
+      // AbschnittsÃ¼berschriften
       if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
         return <h3 key={index} className="news-detail-heading">{paragraph.replace(/\*\*/g, '')}</h3>
       }
@@ -695,7 +532,7 @@ function NewsModal({ news, onClose }: { news: NewsItem; onClose: () => void }) {
     <div className="news-modal-overlay" onClick={onClose}>
       <div className="news-modal" onClick={e => e.stopPropagation()}>
         <button className="news-modal-back" onClick={onClose}>{t.news.back}</button>
-        <button className="news-modal-close" onClick={onClose}>×</button>
+        <button className="news-modal-close" onClick={onClose}>Ã—</button>
         <div className="news-modal-content">
           <div className="news-modal-meta">
             <span className="news-category">{news.category}</span>
@@ -764,7 +601,7 @@ function CTASection() {
           </p>
           <div className="cta-buttons">
             <a href="mailto:contact@progress-holding.de" className="btn btn-primary btn-large">
-              <span className="btn-icon">✉️</span>
+              <span className="btn-icon">âœ‰ï¸</span>
               {t.cta.button}
             </a>
           </div>
