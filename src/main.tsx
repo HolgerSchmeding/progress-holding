@@ -6,9 +6,11 @@ import App from './App.tsx'
 import Impressum from './pages/Impressum.tsx'
 import Datenschutz from './pages/Datenschutz.tsx'
 import CookieConsent from './components/CookieConsent.tsx'
+import { LanguageProvider } from './context/LanguageContext.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <LanguageProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
@@ -17,5 +19,6 @@ createRoot(document.getElementById('root')!).render(
       </Routes>
       <CookieConsent />
     </BrowserRouter>
+    </LanguageProvider>
   </StrictMode>,
 )

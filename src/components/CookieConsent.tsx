@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './CookieConsent.css'
+import { useTranslation } from '../i18n'
 
 declare global {
   interface Window {
@@ -12,6 +13,7 @@ declare global {
 function CookieConsent() {
   const [isVisible, setIsVisible] = useState(false)
   const [showDetails, setShowDetails] = useState(false)
+  const t = useTranslation()
 
   useEffect(() => {
     // Prüfe ob bereits eine Entscheidung getroffen wurde
@@ -69,45 +71,34 @@ function CookieConsent() {
         <div className="cookie-consent-content">
           <div className="cookie-icon">🍪</div>
           <div className="cookie-text">
-            <h3>Wir respektieren Ihre Privatsphäre</h3>
-            <p>
-              Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. 
-              Einige Cookies sind für den Betrieb der Website unerlässlich, während andere 
-              uns helfen, die Website zu analysieren und zu verbessern.
-            </p>
+            <h3>{t.cookie.title}</h3>
+            <p>{t.cookie.description}</p>
             
             {showDetails && (
               <div className="cookie-details">
                 <div className="cookie-category">
                   <div className="cookie-category-header">
                     <span className="cookie-category-icon">✓</span>
-                    <strong>Essenzielle Cookies</strong>
-                    <span className="cookie-badge essential">Immer aktiv</span>
+                    <strong>{t.cookie.essentialTitle}</strong>
+                    <span className="cookie-badge essential">{t.cookie.essentialBadge}</span>
                   </div>
-                  <p>
-                    Diese Cookies sind für das Funktionieren der Website unerlässlich 
-                    und können nicht deaktiviert werden. Sie speichern keine persönlichen Daten.
-                  </p>
+                  <p>{t.cookie.essentialDescription}</p>
                 </div>
                 
                 <div className="cookie-category">
                   <div className="cookie-category-header">
                     <span className="cookie-category-icon">📊</span>
-                    <strong>Analyse-Cookies (Google Analytics)</strong>
-                    <span className="cookie-badge optional">Optional</span>
+                    <strong>{t.cookie.analyticsTitle}</strong>
+                    <span className="cookie-badge optional">{t.cookie.analyticsBadge}</span>
                   </div>
-                  <p>
-                    Diese Cookies helfen uns zu verstehen, wie Besucher mit unserer Website 
-                    interagieren. Alle Daten werden anonymisiert erfasst. Wir verwenden 
-                    Google Analytics 4 mit IP-Anonymisierung.
-                  </p>
+                  <p>{t.cookie.analyticsDescription}</p>
                 </div>
               </div>
             )}
             
             <p className="cookie-legal-link">
-              Mehr Informationen finden Sie in unserer{' '}
-              <Link to="/datenschutz">Datenschutzerklärung</Link>.
+              {t.cookie.moreInfo}{' '}
+              <Link to="/datenschutz">{t.cookie.privacyPolicy}</Link>.
             </p>
           </div>
         </div>
@@ -117,7 +108,7 @@ function CookieConsent() {
             className="cookie-btn cookie-btn-details"
             onClick={() => setShowDetails(!showDetails)}
           >
-            {showDetails ? 'Weniger anzeigen' : 'Details anzeigen'}
+            {showDetails ? t.cookie.hideDetails : t.cookie.showDetails}
           </button>
           
           <div className="cookie-btn-group">
@@ -125,19 +116,19 @@ function CookieConsent() {
               className="cookie-btn cookie-btn-decline"
               onClick={declineAll}
             >
-              Alle ablehnen
+              {t.cookie.declineAll}
             </button>
             <button 
               className="cookie-btn cookie-btn-essential"
               onClick={acceptEssential}
             >
-              Nur essenzielle
+              {t.cookie.essentialOnly}
             </button>
             <button 
               className="cookie-btn cookie-btn-accept"
               onClick={acceptAll}
             >
-              Alle akzeptieren
+              {t.cookie.acceptAll}
             </button>
           </div>
         </div>

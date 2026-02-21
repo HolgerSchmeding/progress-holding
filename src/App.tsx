@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import './App.css'
+import { useLanguage, type Language } from './context/LanguageContext'
+import { useTranslation } from './i18n'
 
 // Custom Hook für Scroll-Animationen
 function useScrollAnimation() {
@@ -260,10 +262,37 @@ function StarField() {
       {hoveredStar && (
         <div className="star-tooltip">
           {projects.find(p => p.id === hoveredStar)?.name}
-          <span className="tooltip-hint">Klicken für Details</span>
+          <span className="tooltip-hint"></span>
         </div>
       )}
     </>
+  )
+}
+
+// Language Switcher Component
+function LanguageSwitcher() {
+  const { language, setLanguage } = useLanguage()
+  const languages: { code: Language; label: string }[] = [
+    { code: 'de', label: 'DE' },
+    { code: 'en', label: 'EN' },
+    { code: 'fr', label: 'FR' },
+  ]
+
+  return (
+    <div className="language-switcher">
+      {languages.map((lang, i) => (
+        <span key={lang.code}>
+          <button
+            className={`lang-btn ${language === lang.code ? 'active' : ''}`}
+            onClick={() => setLanguage(lang.code)}
+            aria-label={lang.label}
+          >
+            {lang.label}
+          </button>
+          {i < languages.length - 1 && <span className="lang-separator">|</span>}
+        </span>
+      ))}
+    </div>
   )
 }
 
@@ -271,6 +300,7 @@ function StarField() {
 function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const t = useTranslation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -292,7 +322,7 @@ function Navigation() {
         <button 
           className="mobile-menu-btn"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Menü öffnen"
+          aria-label={t.nav.menuAriaLabel}
         >
           <span></span>
           <span></span>
@@ -300,11 +330,13 @@ function Navigation() {
         </button>
 
         <ul className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
-          <li><a href="#home" onClick={() => setIsMobileMenuOpen(false)}>Home</a></li>
-          <li><a href="#about" onClick={() => setIsMobileMenuOpen(false)}>Über uns</a></li>
-          <li><a href="#projects" onClick={() => setIsMobileMenuOpen(false)}>Projekte</a></li>
-          <li><a href="#news" onClick={() => setIsMobileMenuOpen(false)}>News & Blog</a></li>
+          <li><a href="#home" onClick={() => setIsMobileMenuOpen(false)}>{t.nav.home}</a></li>
+          <li><a href="#about" onClick={() => setIsMobileMenuOpen(false)}>{t.nav.about}</a></li>
+          <li><a href="#projects" onClick={() => setIsMobileMenuOpen(false)}>{t.nav.projects}</a></li>
+          <li><a href="#news" onClick={() => setIsMobileMenuOpen(false)}>{t.nav.news}</a></li>
+          <li className="nav-lang-item"><LanguageSwitcher /></li>
         </ul>
+        <div className="nav-lang-desktop"><LanguageSwitcher /></div>
       </div>
     </nav>
   )
@@ -312,6 +344,8 @@ function Navigation() {
 
 // Hero Section
 function HeroSection() {
+  const t = useTranslation()
+  
   return (
     <section id="home" className="hero">
       <StarField />
@@ -320,18 +354,17 @@ function HeroSection() {
           <span className="logo-pro">pro</span>
           <span className="logo-dot">.</span>
           <span className="logo-gress">gress</span>
-          <span className="hero-subtitle-inline"> Holding GmbH (i. G.)</span>
+          <span className="hero-subtitle-inline">{t.hero.holdingGmbH}</span>
         </h1>
         <p className="hero-tagline">
-          Strategische Beteiligungen für die Zukunft
+          {t.hero.tagline}
         </p>
         <p className="hero-description">
-          Wir investieren in innovative Ideen und begleiten Startups auf ihrem Weg zum Erfolg. 
-          Jeder Stern am Himmel repräsentiert eines unserer Projekte – und das Universum wächst.
+          {t.hero.description}
         </p>
         <div className="hero-cta">
-          <a href="#projects" className="btn btn-primary">Unsere Projekte</a>
-          <a href="#about" className="btn btn-secondary">Mehr erfahren</a>
+          <a href="#projects" className="btn btn-primary">{t.projects.sectionTitle}</a>
+          <a href="#about" className="btn btn-secondary">{t.hero.ctaSecondary}</a>
         </div>
         <div className="star-legend">
           {projects.map(project => (
@@ -343,7 +376,7 @@ function HeroSection() {
         </div>
       </div>
       <div className="scroll-indicator">
-        <span>Scroll</span>
+        <span>{t.hero.scroll}</span>
         <div className="scroll-arrow"></div>
       </div>
     </section>
@@ -353,47 +386,32 @@ function HeroSection() {
 // About Section
 function AboutSection() {
   const { ref, isVisible } = useScrollAnimation()
+  const t = useTranslation()
   
   return (
     <section id="about" className="about">
       <div className="container">
-        <h2 className="section-title">Über <span className="logo-pro">pro</span><span className="logo-dot">.</span><span className="logo-gress">gress</span></h2>
+        <h2 className="section-title">{t.about.sectionTitle} <span className="logo-pro">pro</span><span className="logo-dot">.</span><span className="logo-gress">gress</span></h2>
         <div ref={ref} className={`about-grid ${isVisible ? 'animate-in' : ''}`}>
           <div className="about-card">
             <div className="about-icon">🎯</div>
-            <h3>Vision</h3>
-            <p>
-              Wir glauben an die transformative Kraft innovativer Ideen. 
-              pro.gress Holding identifiziert und fördert Startups und Projekte, 
-              die das Potenzial haben, Branchen zu revolutionieren und nachhaltigen Mehrwert zu schaffen.
-            </p>
+            <h3>{t.about.vision}</h3>
+            <p>{t.about.visionText}</p>
           </div>
           <div className="about-card">
             <div className="about-icon">🚀</div>
-            <h3>Strategie</h3>
-            <p>
-              Unser Ansatz kombiniert strategische Beteiligungen mit operativer Unterstützung. 
-              Wir bringen nicht nur Kapital, sondern auch Expertise, Netzwerk und 
-              unternehmerische Erfahrung in unsere Portfoliounternehmen ein.
-            </p>
+            <h3>{t.about.strategy}</h3>
+            <p>{t.about.strategyText}</p>
           </div>
           <div className="about-card">
             <div className="about-icon">🤝</div>
-            <h3>Werte</h3>
-            <p>
-              Transparenz, Partnerschaftlichkeit und langfristiges Denken sind die Grundpfeiler 
-              unserer Zusammenarbeit. Wir verstehen uns als aktive Partner, die gemeinsam 
-              mit Gründern Erfolgsgeschichten schreiben.
-            </p>
+            <h3>{t.about.values}</h3>
+            <p>{t.about.valuesText}</p>
           </div>
           <div className="about-card">
             <div className="about-icon">⚡</div>
-            <h3>Agilität</h3>
-            <p>
-              Wir leben agile Methodiken und passen uns schnell an veränderte Marktbedingungen an. 
-              Iterative Entwicklung, kurze Feedbackzyklen und kontinuierliche Verbesserung 
-              sind fest in unserer DNA verankert.
-            </p>
+            <h3>{t.about.agility}</h3>
+            <p>{t.about.agilityText}</p>
           </div>
         </div>
       </div>
@@ -401,39 +419,61 @@ function AboutSection() {
   )
 }
 
+// Helper to get translated project details
+function useProjectTranslations() {
+  const t = useTranslation()
+  const statusMap: Record<string, string> = {
+    'In Entwicklung': t.projects.statusInDevelopment,
+    'In Planung': t.projects.statusPlanning,
+    'Ideenphase': t.projects.statusIdea,
+  }
+  const detailsMap: Record<string, { tagline: string; description: string }> = {
+    'benchtrust': t.projectDetails.benchtrust,
+    'startup24h': t.projectDetails.startup24h,
+    'vat-reclaim': t.projectDetails.vatReclaim,
+    'weg-community': t.projectDetails.wegCommunity,
+    'check-my-price': t.projectDetails.checkMyPrice,
+  }
+  return { statusMap, detailsMap }
+}
+
 // Projects Section
 function ProjectsSection() {
   const { ref, isVisible } = useScrollAnimation()
+  const t = useTranslation()
+  const { statusMap, detailsMap } = useProjectTranslations()
   
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <h2 className="section-title">Unsere Projekte</h2>
+        <h2 className="section-title">{t.projects.sectionTitle}</h2>
         <p className="section-subtitle">
-          Jedes Projekt ist ein Stern in unserem wachsenden Universum – 
-          innovative Lösungen für echte Herausforderungen.
+          {t.projects.sectionSubtitle}
         </p>
         <div ref={ref} className={`projects-grid ${isVisible ? 'animate-in' : ''}`}>
-          {projects.map((project, index) => (
-            <div 
-              key={project.id} 
-              data-project-id={project.id}
-              className="project-card" 
-              style={{ '--project-color': project.color, '--delay': `${index * 0.1}s` } as React.CSSProperties}
-            >
-              <div className="project-header">
-                <span className="project-icon">{project.icon}</span>
-                <span className="project-status">{project.status}</span>
+          {projects.map((project, index) => {
+            const details = detailsMap[project.id]
+            return (
+              <div 
+                key={project.id} 
+                data-project-id={project.id}
+                className="project-card" 
+                style={{ '--project-color': project.color, '--delay': `${index * 0.1}s` } as React.CSSProperties}
+              >
+                <div className="project-header">
+                  <span className="project-icon">{project.icon}</span>
+                  <span className="project-status">{statusMap[project.status] || project.status}</span>
+                </div>
+                <h3 className="project-name">{project.name}</h3>
+                <p className="project-tagline">{details?.tagline || project.tagline}</p>
+                <p className="project-description">{details?.description || project.description}</p>
+                <div className="project-star-indicator" style={{ backgroundColor: project.color }}></div>
               </div>
-              <h3 className="project-name">{project.name}</h3>
-              <p className="project-tagline">{project.tagline}</p>
-              <p className="project-description">{project.description}</p>
-              <div className="project-star-indicator" style={{ backgroundColor: project.color }}></div>
-            </div>
-          ))}
+            )
+          })}
         </div>
         <div className="projects-cta">
-          <p>Mehr Projekte sind in Planung. Bleiben Sie gespannt!</p>
+          <p>{t.projects.ctaText}</p>
         </div>
       </div>
     </section>
@@ -615,6 +655,8 @@ Mit dieser Infrastruktur reduzieren wir unsere administrativen Fixkosten drastis
 
 // News Detail Modal
 function NewsModal({ news, onClose }: { news: NewsItem; onClose: () => void }) {
+  const t = useTranslation()
+
   useEffect(() => {
     document.body.style.overflow = 'hidden'
     return () => {
@@ -652,7 +694,7 @@ function NewsModal({ news, onClose }: { news: NewsItem; onClose: () => void }) {
   return (
     <div className="news-modal-overlay" onClick={onClose}>
       <div className="news-modal" onClick={e => e.stopPropagation()}>
-        <button className="news-modal-back" onClick={onClose}>← Zurück</button>
+        <button className="news-modal-back" onClick={onClose}>{t.news.back}</button>
         <button className="news-modal-close" onClick={onClose}>×</button>
         <div className="news-modal-content">
           <div className="news-modal-meta">
@@ -673,14 +715,15 @@ function NewsModal({ news, onClose }: { news: NewsItem; onClose: () => void }) {
 function NewsSection() {
   const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null)
   const { ref, isVisible } = useScrollAnimation()
+  const t = useTranslation()
   
   return (
     <>
       <section id="news" className="news">
         <div className="container">
-          <h2 className="section-title">News & Blog</h2>
+          <h2 className="section-title">{t.news.sectionTitle}</h2>
           <div ref={ref} className={`news-grid ${isVisible ? 'animate-in' : ''}`}>
-            {newsData.map(item => (
+            {t.news.articles.map(item => (
               <article key={item.id} className="news-card">
                 <div className="news-meta">
                   <span className="news-category">{item.category}</span>
@@ -692,7 +735,7 @@ function NewsSection() {
                   className="news-link" 
                   onClick={() => setSelectedNews(item)}
                 >
-                  Weiterlesen →
+                  {t.news.readMore}
                 </button>
               </article>
             ))}
@@ -709,20 +752,20 @@ function NewsSection() {
 // CTA Section
 function CTASection() {
   const { ref, isVisible } = useScrollAnimation()
+  const t = useTranslation()
   
   return (
     <section id="contact" className="cta-section">
       <div className="container">
         <div ref={ref} className={`cta-content ${isVisible ? 'animate-in' : ''}`}>
-          <h2 className="cta-title">Interesse geweckt?</h2>
+          <h2 className="cta-title">{t.cta.title}</h2>
           <p className="cta-description">
-            Ob als Investor, potenzieller Partner oder mit einer innovativen Idee – 
-            wir freuen uns auf den Austausch mit Ihnen.
+            {t.cta.description}
           </p>
           <div className="cta-buttons">
             <a href="mailto:contact@progress-holding.de" className="btn btn-primary btn-large">
               <span className="btn-icon">✉️</span>
-              Kontakt aufnehmen
+              {t.cta.button}
             </a>
           </div>
         </div>
@@ -733,6 +776,8 @@ function CTASection() {
 
 // Footer
 function Footer() {
+  const t = useTranslation()
+
   return (
     <footer className="footer">
       <div className="container">
@@ -743,28 +788,28 @@ function Footer() {
               <span className="logo-dot">.</span>
               <span className="logo-gress">gress</span>
             </div>
-            <p>Holding GmbH</p>
-            <p className="footer-tagline">Strategische Beteiligungen für die Zukunft</p>
+            <p>{t.footer.holdingGmbH}</p>
+            <p className="footer-tagline">{t.footer.tagline}</p>
           </div>
           <div className="footer-links">
-            <h4>Navigation</h4>
+            <h4>{t.footer.navigation}</h4>
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">Über uns</a></li>
-              <li><a href="#projects">Projekte</a></li>
+              <li><a href="#home">{t.nav.home}</a></li>
+              <li><a href="#about">{t.nav.about}</a></li>
+              <li><a href="#projects">{t.nav.projects}</a></li>
             </ul>
           </div>
           <div className="footer-contact">
-            <h4>Kontakt</h4>
+            <h4>{t.footer.contact}</h4>
             <p>contact@progress-holding.de</p>
             <p>www.progress-holding.de</p>
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} pro.gress Holding GmbH (i. G.). Alle Rechte vorbehalten.</p>
+          <p>&copy; {new Date().getFullYear()} pro.gress Holding GmbH. {t.footer.allRightsReserved}</p>
           <div className="footer-legal">
-            <Link to="/impressum">Impressum</Link>
-            <Link to="/datenschutz">Datenschutz</Link>
+            <Link to="/impressum">{t.footer.impressum}</Link>
+            <Link to="/datenschutz">{t.footer.datenschutz}</Link>
           </div>
         </div>
       </div>
