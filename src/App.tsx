@@ -1,10 +1,10 @@
-﻿import { useEffect, useRef, useState, useCallback } from 'react'
+import { useEffect, useRef, useState, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import './App.css'
 import { useLanguage, type Language } from './context/LanguageContext'
 import { useTranslation } from './i18n'
 
-// Custom Hook fÃ¼r Scroll-Animationen
+// Custom Hook für Scroll-Animationen
 function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
@@ -35,50 +35,50 @@ const projects = [
     id: 'benchtrust',
     name: 'BenchTrust GmbH',
     tagline: 'BenchTrust ist eine digitale Market Intelligence Plattform',
-    description: 'BenchTrust ist die erste Plattform, die trusted data, peer insights und KI-gestÃ¼tzte Automatisierung kombiniert, um den gesamten Beschaffungsprozess in Unternehmen schneller, einfacher und smarter zu machen.',
+    description: 'BenchTrust ist die erste Plattform, die trusted data, peer insights und KI-gestützte Automatisierung kombiniert, um den gesamten Beschaffungsprozess in Unternehmen schneller, einfacher und smarter zu machen.',
     color: '#3b82f6',
-    icon: 'ðŸ“Š',
+    icon: '📊',
     status: 'In Entwicklung'
   },
   {
     id: 'startup24h',
     name: 'startup24h',
-    tagline: 'Wir bauen die digitale Ãœberholspur fÃ¼r GrÃ¼nder.',
-    description: 'startup24h verwandelt den politischen Willen zur 24-Stunden-GrÃ¼ndung in RealitÃ¤t â€“ mit einer Plattform, die Wartezeiten abschafft: VollstÃ¤ndig digital, rechtssicher und startklar in nur 24 Stunden.',
+    tagline: 'Wir bauen die digitale Überholspur für Gründer.',
+    description: 'startup24h verwandelt den politischen Willen zur 24-Stunden-Gründung in Realität – mit einer Plattform, die Wartezeiten abschafft: Vollständig digital, rechtssicher und startklar in nur 24 Stunden.',
     color: '#f59e0b',
-    icon: 'ðŸš€',
+    icon: '🚀',
     status: 'In Planung'
   },
   {
     id: 'vat-reclaim',
     name: 'VAT-Reclaim',
-    tagline: 'Automatisierte MehrwertsteuerrÃ¼ckerstattung',
-    description: 'VAT-Reclaim automatisiert den komplexen Prozess der MehrwertsteuerrÃ¼ckerstattung fÃ¼r Unternehmen. Durch intelligente Dokumentenverarbeitung und direkte BehÃ¶rdenschnittstellen werden Erstattungen schneller und effizienter abgewickelt.',
+    tagline: 'Automatisierte Mehrwertsteuerrückerstattung',
+    description: 'VAT-Reclaim automatisiert den komplexen Prozess der Mehrwertsteuerrückerstattung für Unternehmen. Durch intelligente Dokumentenverarbeitung und direkte Behördenschnittstellen werden Erstattungen schneller und effizienter abgewickelt.',
     color: '#10b981',
-    icon: 'ðŸ’°',
+    icon: '💰',
     status: 'In Entwicklung'
   },
   {
     id: 'weg-community',
     name: 'WEG-Community',
-    tagline: 'Digitale Plattform fÃ¼r WohnungseigentÃ¼mergemeinschaften',
-    description: 'WEG-Community digitalisiert die Verwaltung und Kommunikation von WohnungseigentÃ¼mergemeinschaften. Die Plattform ermÃ¶glicht transparente Abstimmungen, Dokumentenverwaltung und effiziente Kommunikation zwischen EigentÃ¼mern und Verwaltern.',
+    tagline: 'Digitale Plattform für Wohnungseigentümergemeinschaften',
+    description: 'WEG-Community digitalisiert die Verwaltung und Kommunikation von Wohnungseigentümergemeinschaften. Die Plattform ermöglicht transparente Abstimmungen, Dokumentenverwaltung und effiziente Kommunikation zwischen Eigentümern und Verwaltern.',
     color: '#8b5cf6',
-    icon: 'ðŸ ',
+    icon: '🏠',
     status: 'In Entwicklung'
   },
   {
     id: 'check-my-price',
     name: 'Check my price',
-    tagline: 'Der intelligente AI-Agent fÃ¼r den besten Reisepreis',
-    description: 'Check my price revolutioniert den Reise-Preisvergleich durch kÃ¼nstliche Intelligenz. Nutzer laden ihr Flug- oder Hotelangebot einfach als Foto oder PDF hoch â€“ unser AI-Agent prÃ¼ft in Echtzeit, ob es gÃ¼nstigere Alternativen gibt. Das System validiert den Bestpreis und liefert sofort buchbare, kosteneffiziente Gegenangebote.',
+    tagline: 'Der intelligente AI-Agent für den besten Reisepreis',
+    description: 'Check my price revolutioniert den Reise-Preisvergleich durch künstliche Intelligenz. Nutzer laden ihr Flug- oder Hotelangebot einfach als Foto oder PDF hoch – unser AI-Agent prüft in Echtzeit, ob es günstigere Alternativen gibt. Das System validiert den Bestpreis und liefert sofort buchbare, kosteneffiziente Gegenangebote.',
     color: '#ec4899',
-    icon: 'ðŸ”',
+    icon: '🔍',
     status: 'Ideenphase'
   }
 ]
 
-// Star Component fÃ¼r den animierten Sternenhimmel
+// Star Component für den animierten Sternenhimmel
 interface Star {
   id: number
   x: number
@@ -135,7 +135,7 @@ function StarField() {
         twinkleSpeed: Math.random() * 0.02 + 0.01
       }))
 
-      // Projekt-Sterne (grÃ¶ÃŸere, hellere Sterne) - in einem Kreis angeordnet
+      // Projekt-Sterne (größere, hellere Sterne) - in einem Kreis angeordnet
       const centerX = canvas.width / 2
       const centerY = canvas.height / 2
       const radius = Math.min(canvas.width, canvas.height) * 0.22
@@ -394,22 +394,22 @@ function AboutSection() {
         <h2 className="section-title">{t.about.sectionTitle} <span className="logo-pro">pro</span><span className="logo-dot">.</span><span className="logo-gress">gress</span></h2>
         <div ref={ref} className={`about-grid ${isVisible ? 'animate-in' : ''}`}>
           <div className="about-card">
-            <div className="about-icon">ðŸŽ¯</div>
+            <div className="about-icon">🎯</div>
             <h3>{t.about.vision}</h3>
             <p>{t.about.visionText}</p>
           </div>
           <div className="about-card">
-            <div className="about-icon">ðŸš€</div>
+            <div className="about-icon">🚀</div>
             <h3>{t.about.strategy}</h3>
             <p>{t.about.strategyText}</p>
           </div>
           <div className="about-card">
-            <div className="about-icon">ðŸ¤</div>
+            <div className="about-icon">🤝</div>
             <h3>{t.about.values}</h3>
             <p>{t.about.valuesText}</p>
           </div>
           <div className="about-card">
-            <div className="about-icon">âš¡</div>
+            <div className="about-icon">⚡</div>
             <h3>{t.about.agility}</h3>
             <p>{t.about.agilityText}</p>
           </div>
@@ -515,7 +515,7 @@ function NewsModal({ news, onClose }: { news: NewsItem; onClose: () => void }) {
           </div>
         )
       }
-      // AbschnittsÃ¼berschriften
+      // Abschnittsüberschriften
       if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
         return <h3 key={index} className="news-detail-heading">{paragraph.replace(/\*\*/g, '')}</h3>
       }
@@ -532,7 +532,7 @@ function NewsModal({ news, onClose }: { news: NewsItem; onClose: () => void }) {
     <div className="news-modal-overlay" onClick={onClose}>
       <div className="news-modal" onClick={e => e.stopPropagation()}>
         <button className="news-modal-back" onClick={onClose}>{t.news.back}</button>
-        <button className="news-modal-close" onClick={onClose}>Ã—</button>
+        <button className="news-modal-close" onClick={onClose}>×</button>
         <div className="news-modal-content">
           <div className="news-modal-meta">
             <span className="news-category">{news.category}</span>
@@ -601,7 +601,7 @@ function CTASection() {
           </p>
           <div className="cta-buttons">
             <a href="mailto:contact@progress-holding.de" className="btn btn-primary btn-large">
-              <span className="btn-icon">âœ‰ï¸</span>
+              <span className="btn-icon">✉️</span>
               {t.cta.button}
             </a>
           </div>
